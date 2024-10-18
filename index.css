@@ -1,10 +1,12 @@
+/* Fontes personalizadas */
 @font-face {
-    font-family: 'Fairy'; /* Nome que você escolhe para a fonte */
-    src: url('./FairyDustB.ttf') format('truetype'); /* Caminho para o arquivo da fonte */
+    font-family: 'Fairy'; /* Nome da fonte */
+    src: url('./FairyDustB.ttf') format('truetype'); /* Caminho da fonte */
     font-weight: normal;
     font-style: normal;
 }
 
+/* Estilos Globais */
 body {
     color: white;
     background-image: url('./img/Creia.jpg');
@@ -20,6 +22,7 @@ body {
     height: 100vh;
 }
 
+/* Estilos de Navegação */
 nav {
     background-color: rgba(0, 0, 0, 0.8); /* Fundo semi-transparente */
     border: 1px solid rgba(219, 35, 35, 0.6);
@@ -30,27 +33,17 @@ nav {
     max-width: 800px;
 }
 
-.header {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.png-image {
-    max-width: 150px; /* Ajuste a largura da imagem do PNG */
-    height: auto;
-}
-
+/* Estilos para o Título */
 h1 {
     color: #fff8f8;
-    font-size: 3em;
+    font-size: 2em;
     text-align: center;
     margin-bottom: 20px;
     font-family: 'Fairy', Times, serif;
     text-shadow: 0 0 10px rgba(219, 35, 35, 0.6);
 }
 
+/* Estilos para Lore */
 .lore {
     color: white;
     font-size: 1.2em;
@@ -59,6 +52,7 @@ h1 {
     padding: 0 20px;
 }
 
+/* Menu Estilizado */
 .menu ul {
     display: flex;
     justify-content: space-around;
@@ -88,8 +82,10 @@ h1 {
     position: relative;
     background-size: cover;
     background-position: center;
-    width: 250px;
-    height: 150px;
+    width: 100%; /* Ocupar toda a largura em dispositivos móveis */
+    max-width: 250px;
+    height: auto;
+    margin-bottom: 10px;
 }
 
 .menu a span {
@@ -100,32 +96,59 @@ h1 {
     text-align: center;
 }
 
+/* Botões de Imagem */
 .btn-plot {
-    background-image: url('./img/Pt.jpg'); /* Substitua com o caminho da imagem */
-    width: 250px;
-    height: 150px;
+    background-image: url('./img/Pt.jpg'); /* Caminho da imagem */
+    max-width: 100%;
+    height: auto;
 }
 
 .btn-regras {
-    background-image: url('./img/Regras.jpg'); /* Substitua com o caminho da imagem */
-    width: 250px;
-    height: 150px;
+    background-image: url('./img/Regras.jpg'); /* Caminho da imagem */
+    max-width: 100%;
+    height: auto;
 }
 
 .btn-fendas {
-    background-image: url('./img/Fendas.jpg'); /* Substitua com o caminho da imagem */
-    width: 250px;
-    height: 150px;
+    background-image: url('./img/Fendas.jpg'); /* Caminho da imagem */
+    max-width: 100%;
+    height: auto;
 }
 
 .btn-fichas {
-    background-image: url('./img/Fichas.jpg'); /* Substitua com o caminho da imagem */
-    width: 250px;
-    height: 150px;
+    background-image: url('./img/Fichas.jpg'); /* Caminho da imagem */
+    max-width: 100%;
+    height: auto;
 }
 
+/* Efeitos de Hover */
 a:hover {
     background-color: rgba(219, 35, 35, 0.6);
     color: white;
     box-shadow: 0 0 10px rgba(219, 35, 35, 0.6), 0 0 20px rgba(219, 35, 35, 0.6);
+}
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+    
+    .menu ul {
+        flex-direction: column;
+    }
+
+    .menu a {
+        padding: 40px 20px;
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .png-image {
+        max-width: 150px; /* Ajuste a largura da imagem do PNG */
+        height: auto;
+    }
 }
