@@ -22,9 +22,30 @@ body {
     height: 100vh;
 }
 
+.header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row; /* Mantém os itens em linha para telas maiores */
+    padding: 20px;
+}
+
+.header img {
+    max-width: 150px; /* Controla o tamanho da imagem */
+    height: auto;
+    margin-right: 20px; /* Espaço entre a imagem e o texto */
+}
+
+.header h1 {
+    font-size: 2em;
+    color: #000000;
+    font-family: 'Fairy', Times, serif;
+    text-shadow: 0 0 10px rgba(219, 35, 35, 0.6);
+    margin: 0;
+}
 /* Estilos de Navegação */
 nav {
-    background-color: rgba(0, 0, 0, 0.8); /* Fundo semi-transparente */
     border: 1px solid rgba(219, 35, 35, 0.6);
     padding: 40px;
     border-radius: 10px;
@@ -35,7 +56,7 @@ nav {
 
 /* Estilos para o Título */
 h1 {
-    color: #fff8f8;
+    color: #000000;
     font-size: 2em;
     text-align: center;
     margin-bottom: 20px;
@@ -45,7 +66,7 @@ h1 {
 
 /* Estilos para Lore */
 .lore {
-    color: white;
+    color: rgb(0, 0, 0);
     font-size: 1.2em;
     text-align: center;
     margin: 20px 0;
@@ -151,4 +172,20 @@ a:hover {
         max-width: 150px; /* Ajuste a largura da imagem do PNG */
         height: auto;
     }
+}
+.header {
+    flex-direction: column; /* Coloca a imagem acima do texto em dispositivos móveis */
+    justify-content: center;
+    align-items: center;
+}
+
+.header img {
+    margin-right: 0;
+    margin-bottom: 15px; /* Adiciona espaço abaixo da imagem */
+    max-width: 100px; /* Reduz a imagem em telas pequenas */
+}
+
+.header h1 {
+    font-size: 1.5em; /* Ajusta o tamanho do texto em telas menores */
+    text-align: center; /* Centraliza o texto para melhor visualização */
 }
